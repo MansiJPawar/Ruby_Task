@@ -1,5 +1,6 @@
 friends = Array["birds","animals","trees","shells"]
 
+
 #update array
 friends[3] = "nature"
 
