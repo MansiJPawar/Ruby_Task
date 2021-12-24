@@ -25,3 +25,4 @@ puts
     next i <= 10
     puts "#{table}*#{i} = #{multi}"
 end
+
