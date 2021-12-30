@@ -1,6 +1,5 @@
 class Matrix 
 @c
-
 puts "enter data"
 data = []
 
@@ -33,13 +32,31 @@ puts "your index of choice is #{data[row][col]}"
 puts "your index at #{data[row][col]} , now give value to replace with"
 value = gets.chomp().to_i
 
-# a[row][col] = value
 data[row][col] = value
 row = data[row][col]
 
 for row in data
     @c = (row.inspect)
     puts @c
+end
+
+#check if value match adjacent index values,if yes then put zero  #if index is zero   #replace value
+   if (data[row][col] == data[row][col-1] && data[row][col+1] )#if adjacent values of col match put zero
+        puts data[row][col] = nil
+        data[row][col-1] = nil
+        data[row][col+1] = nil
+    elsif (data[row][col] == data[row-1][col] && data[row+1][col] )#if adjacent values of row match put zero
+        puts data[row][col] = nil
+        data[row-1][col] = nil
+        data[row+1][col] = nil
+    else 
+        puts "values not null"
+    end
+
+#print lastest array with changes
+for row in data
+    s = (row.inspect)
+    puts s
 end
 
 #puts @c.map { |row| row.map { |col| col + 1 } } #map over nested array
