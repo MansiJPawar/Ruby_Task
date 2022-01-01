@@ -41,22 +41,113 @@ for row in data
 end
 
 #check if value match adjacent index values,if yes then put zero  #if index is zero   #replace value
-   if (data[row][col] == data[row][col-1] && data[row][col+1] )#if adjacent values of col match put zero
-        puts data[row][col] = nil
-        data[row][col-1] = nil
-        data[row][col+1] = nil
-    elsif (data[row][col] == data[row-1][col] && data[row+1][col] )#if adjacent values of row match put zero
-        puts data[row][col] = nil
-        data[row-1][col] = nil
-        data[row+1][col] = nil
-    else 
-        puts "values not null"
-    end
-
+if (value == data[row][col-1] && value == data[row][col+1])# adjacent ele of middle ele col
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col+1] = 0
+elsif (value == data[row-1][col] && value == data[row+1][col])#adjacent value for  middle ele row
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row+1][col] = 0
+elsif (value == data[row][col-1] && value == data[row][col+1] && value == data[row][col-2])# adjacent 2ele of middle ele col
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col+1] = 0
+    data[row][col-2] = 0
+elsif (value == data[row-1][col] && value == data[row+1][col] && value == data[row-2][col])#adjacent value for  middle ele row
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row+1][col] = 0
+    data[row-2][col] = 0
+elsif (value == data[row][col-1] && value == data[row][col+1] && value == data[row][col+2]  )# adjacent 2ele of middle ele col
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col+1] = 0
+    data[row][col+2] = 0
+elsif (value == data[row-1][col] && value == data[row+1][col] && value == data[row-2][col] && value == data[row+2][col])#adjacent value for  middle ele row
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row+1][col] = 0
+    data[row+2][col] = 0
+elsif (value == data[row][col-1] && value == data[row][col+1] && value == data[row][col-2] && value == data[row][col+2]  )# adjacent 2ele of middle ele col
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col+1] = 0
+    data[row][col-2] = 0
+    data[row][col+2] = 0
+elsif (value == data[row-1][col] && value == data[row+1][col] && value == data[row-2][col] && value == data[row+2][col])#adjacent value for  middle ele row
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row+1][col] = 0
+    data[row-2][col] = 0
+    data[row+2][col] = 0
+elsif (value == data[row][col+1] && value == data[row][col+2])# next 2 values for col ele
+    puts data[row][col] = 0
+    data[row][col+1] = 0
+    data[row][col+2] = 0
+elsif (value == data[row+1][col] && value == data[row+2][col]) #next 2 values for row ele
+    puts data[row][col] = 0
+    data[row+1][col] = 0
+    data[row+2][col] = 0
+elsif (value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3])# next 3 values for col ele
+    puts data[row][col] = 0
+    data[row][col+1] = 0
+    data[row][col+2] = 0
+    data[row][col+3] = 0
+elsif (value == data[row+1][col] && value == data[row+2][col] && value == data[row+3][col]) #next 3 values for row ele
+   puts data[row][col] = 0
+   data[row+1][col] = 0
+   data[row+2][col] = 0
+   data[row+3][col] = 0
+elsif (value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == data[row][col+4])# next 4 values for col ele
+    puts data[row][col] = 0
+    data[row][col+1] = 0
+    data[row][col+2] = 0
+    data[row][col+3] = 0
+    data[row][col+4] = 0
+elsif (value == data[row+1][col] && value == data[row+2][col] && value == data[row+3][col] && value == data[row+4][col]) #next 4 values for row ele
+   puts data[row][col] = 0
+   data[row+1][col] = 0
+   data[row+2][col] = 0
+   data[row+3][col] = 0
+   data[row+4][col] = 0
+elsif (value == data[row-1][col] && value == data[row-2][col]) #prev 2 values for row ele
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row-2][col] = 0
+elsif (value == data[row][col+1] && value == data[row][col+2])#prev 2 values for col ele
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col-2] = 0
+elsif (value == data[row-1][col] && value == data[row-2][col] && value == data[row-3][col]) #prev 3 values for row ele
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row-2][col] = 0
+    data[row-3][col] = 0
+elsif (value == data[row][col-1] && value == data[row][col-2] &&  value == data[row][col-3])#prev 3 values for col ele
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col-2] = 0
+    data[row][col-3] = 0
+elsif (value == data[row-1][col] && value == data[row-2][col] && value == data[row-3][col] && value == data[row-4][col] ) #prev 4 values for row ele
+    puts data[row][col] = 0
+    data[row-1][col] = 0
+    data[row-2][col] = 0
+    data[row-3][col] = 0
+    data[row-4][col] = 0
+elsif (value == data[row][col-1] && value == data[row][col-2] && value == data[row][col-3] && value == data[row][col-4])#prev 4 values for col ele
+    puts data[row][col] = 0
+    data[row][col-1] = 0
+    data[row][col-2] = 0
+    data[row][col-3] = 0
+    data[row][col-4] = 0
+else
+    puts "invalid"
+end
 #print lastest array with changes
 for row in data
-    s = (row.inspect)
-    puts s
+s = (row.inspect)
+puts s
 end
 
 #puts @c.map { |row| row.map { |col| col + 1 } } #map over nested array
@@ -67,7 +158,6 @@ end
 #     #     data[][]-1 == value #remove
 #      print "3 values match in row , click to remove matching data"
     #  c.delete_at(data[row][col]) 
-
 
 # #if 3 data match remove from array for col
 # 
