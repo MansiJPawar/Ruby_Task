@@ -1,6 +1,9 @@
+#primary array
 data = Array.new(6) { Array.new(6) { (rand(0..5)) } }
 print data
+
 puts 
+
 #taking index from user to replace
 puts "enter index for row"
 row = gets.chomp().to_i
@@ -10,19 +13,18 @@ col = gets.chomp().to_i
 #display user given index
 puts "your index of choice is #{data[row][col]}"
 
-
 puts "your index at #{data[row][col]} , now give value to replace with"
 value = gets.chomp().to_i
 
+#replace value at user index if zero present
 if data[row][col] == 0
 data[row][col] = value
-row = data[row][col]
 p data
 else
 p "index not zero"
 end
 
-if data[row][col] = value 
+if data[row][col] = value
 #check if value match adjacent index values,if yes then put zero  #if index is zero   #replace value
 #*********************FOR COL 6
 if value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == a[row][col+4] && value == data[row][col+5]
@@ -400,7 +402,7 @@ elsif value == data[row+1][col] && value == data[row-1][col] #works
             data[row+1][col] = 0
             data[row-1][col] = 0
             print data
-elsif value == data[row-1][col] && value == data[row-2][col]
+elsif value == data[row-1][col] && value == data[row-2][col] #works
             #R3#R4 ROW 3
             puts data[row][col] = 0
                 data[row-1][col] = 0
