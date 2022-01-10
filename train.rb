@@ -16,10 +16,10 @@ $option
         puts "Enter age"
         passengerage = gets.chomp().to_s
         puts "Enter depart from"
-        
+
         depart = gets.chomp().to_s
         puts "Enter destination"
-        destination = gets.chomp().to_s
+        destnation = gets.chomp().to_s
        when 2
         puts "2 >> View Ticket"
        when 3
