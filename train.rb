@@ -9,11 +9,14 @@ $option
       case $option
        when 1
         puts "1 >> Book Ticket"
+
         puts "Enter name"
         passengername = gets.chomp().to_s
+
         puts "Enter age"
         passengerage = gets.chomp().to_s
         puts "Enter depart from"
+        
         depart = gets.chomp().to_s
         puts "Enter destination"
         destination = gets.chomp().to_s
@@ -28,8 +31,7 @@ $option
 
     
     def bookticket()
-        case $option
-        when 1
+
         
         end
     end
