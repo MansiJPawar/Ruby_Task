@@ -1,124 +1,83 @@
 require 'io/console'
 
 class Train 
-$option 
-$name
-$passwordagain
-$password
-$destination
-$depart
 
-    #signup
-    def details(passengername,password,passwordagain,option)
-        $name = passengername
-        $password = password
-        $passwordagain = passwordagain
-        $option = option
-    end    
-    
     #operations
-    def diplay
-        if $password == $passwordagain
+    def display
+        puts "Enter Name"
+        @name = gets.chomp().to_s
+
+        puts "Enter Password"
+        @password = STDIN.noecho(&:gets).chomp
+
+        puts "Enter again to confirm password"
+        @passwordagain = STDIN.noecho(&:gets).chomp
+
+        if @password == @passwordagain
+
+           while true
            puts
            puts "1 .. Book Ticket"
            puts "2 .. View Ticket"
            puts "3 .. Cancle Ticket"
+           
+           puts "Enter Choice"
+           @option = gets.chomp().to_i
 
-           while 
-           case $option 
-           when 1
-           puts ".. Book Ticket.."
-           puts $name 
-           puts $passengerage
-           when 2
-           puts "2 .. View Ticket"
-           when 3
-           puts "3 .. Cancle Ticket"
-           else
-           puts "invalid option"
-           end
-           end
-        else 
-           puts "Incorrect Password"
-        end
-    end
+                case @option 
+                when 1
+                puts ".. Book Ticket.."
 
-    # def printoption
-      
-    #   case $option
-    #    when 1
-    #     puts "1 >> Book Ticket"
-    #     puts $name
+                file = File.open("details.txt" , "r")
+                for line in file.readlines()
+                        puts line   
+                        puts  
+                end
+                file.close()
 
-    #     puts "Enter age"
-    #     $passengerage = gets.chomp().to_s
+                puts @name
+                puts "Enter age"
+                @age = gets.chomp().to_i
+                puts @age
+                puts "Enter your start-loaction"
+                @start = gets.chomp
+                puts "Enter your end-loaction"
+                @end = gets.chomp
 
-    #     puts "Enter depart from"
-    #     $depart = gets.chomp().to_s
+                puts "********"
 
-    #     puts "Enter destination"
-    #     $destination = gets.chomp().to_s
+                list = ["pune","lonavla","hinjewadi","chikli"]
+                list2 = ["mumbai","dangechowk","katraj","balewadi"]
 
-    #    when 2
-    #     puts "2 >> View Ticket"
-    #     puts "Name #{name}"
-    #     puts "Age #{passengerage}"
-    #     puts "Depart #{depart}"
-    #     puts "Destination #{destination}"
-    #     puts "Date"
-    #     puts "Booked Succefully"
-    #     puts
+                if list.include?(@start) && list2.include?(@end)
+                    puts "Train available"
+                else
+                    puts "Train not available"
+                end
 
-    #    when 3
-    #     puts "3 >> Cancle Ticket"
-
-    #    else 
-    #     puts "Invalid try again"
-    #    end
-    # end
-
-    #validate password
-    # def printup
-    
-    #  puts " ********* User-data ********* "
-    #  puts 
-
-    #  puts $name
-      
-    #  if $password == $passwordagain
-    #     puts "Done"
-    #  else
-    #     puts "Password don't match"
-    #  end
-    # end
-
-    # #viewticket
-    # def viewticket
-    #     puts "Name #{$name}"
-    #     puts "Age #{$passengerage}"
-    #     puts "Depart #{$depart}"
-    #     puts "Destination #{$destination}"
-    #     puts "Date"
-    #     puts "Booked Succefully"
-    #     puts
-    # end
-
-end 
-
-#for signup details
-
-puts "Enter Name"
-passengername = gets.chomp().to_s
-
-puts "Enter Password"
-password = STDIN.noecho(&:gets).chomp
-
-puts "Enter Password"
-passwordagain = STDIN.noecho(&:gets).chomp
+                when 2
+                puts "2 .. View Ticket"
+                puts "**Your Details**"
+                puts "Passenger Name : #{@name}\n"
+                puts "Age : #{@age}\n"
+                puts "Departure from : #{@start}\n"
+                puts"Destination to : #{@end}"
+            
+                when 3
+                puts "3 .. Cancle Ticket"
+                file = File.open("TicketCreated.txt" , "r+")
+                File.delete(file)
+                puts "Ticket canceled succesfully..."
+                else 
+                puts "Incorrect Password"
+                end #case end
+               
+                end
+            end
+    end #while end
+end  #classend
 
 #for options
 puts 
-puts "Enter Choice"
-$option = gets.chomp().to_i
 c1 = Train.new
-c1.diplay
+c1.display
