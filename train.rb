@@ -28,13 +28,6 @@ class Train
                 when 1
                 puts ".. Book Ticket.."
 
-                file = File.open("details.txt" , "r")
-                for line in file.readlines()
-                        puts line   
-                        puts  
-                end
-                file.close()
-
                 puts @name
                 puts "Enter age"
                 @age = gets.chomp().to_i
@@ -51,8 +44,16 @@ class Train
 
                 if list.include?(@start) && list2.include?(@end)
                     puts "Train available"
+
+                    $ticketHash = {"Starting_Point" => @start,"Ending_Point"=>@end,"passanger_Name"=>@name,"Passanger_age"=>@age}
+                    File.open("created.txt" , "w") do |file|
+                    file.write($ticketHash)
+                    print "\nTicket Registered : \n"
+                    end
+
                 else
                     puts "Train not available"
+
                 end
 
                 when 2
@@ -65,9 +66,12 @@ class Train
             
                 when 3
                 puts "3 .. Cancle Ticket"
-                file = File.open("TicketCreated.txt" , "r+")
-                File.delete(file)
-                puts "Ticket canceled succesfully..."
+
+                  file = File.open("created.txt" , "r+")
+                  File.delete(file)
+                  print "\n\nTicket Cancelled !!\n"  
+                  
+
                 else 
                 puts "Incorrect Password"
                 end #case end
