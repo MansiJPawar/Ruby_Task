@@ -26,49 +26,49 @@ p "index not zero"
 end
 
 if data[row][col] = value
-#check if value match adjacent index values,if yes then put zero  #if index is zero   #replace value
-#*********************FOR COL 6
-if value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == a[row][col+4] && value == data[row][col+5]
-    #D1 COL 6 
-    puts data[row][col] = 0
-    data[row][col+1] = 0
-    data[row][col+2] = 0
-    data[row][col+3] = 0
-    data[row][col+4] = 0
-    data[row][col+5] = 0
-    print data
+       #check if value match adjacent index values,if yes then put zero  #if index is zero   #replace value
+       #*********************FOR COL 6
+       if value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == a[row][col+4] && value == data[row][col+5]
+             #D1 COL 6 
+                puts data[row][col] = 0
+                  data[row][col+1] = 0
+                  data[row][col+2] = 0
+                  data[row][col+3] = 0
+                  data[row][col+4] = 0
+                  data[row][col+5] = 0
+                print data
 
-elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == data[row][col+4] && value == data[row][col-1]
-    #D2 COL 6
-    puts data[row][col] = 0
-        data[row][col+1] = 0
-        data[row][col+2] = 0
-        data[row][col+3] = 0
-        data[row][col+4] = 0
-        data[row][col-1] = 0
-        print data
-elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == data[row][col-1] && value == data[row][col-2]
-    #D3 COL 6
-    puts data[row][col] = 0
-        data[row][col+1] = 0
-        data[row][col+2] = 0
-        data[row][col+3] = 0
-        data[row][col-1] = 0
-        data[row][col-2] = 0
-        print data
-elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col-1] && value == data[row][col-2] && value == data[row][col-3]
-    #D4 COL 6
-    puts data[row][col] = 0
-        data[row][col+1] = 0
-        data[row][col+2] = 0
-        data[row][col-1] = 0
-        data[row][col-2] = 0
-        data[row][col-3] = 0
-        print data
-elsif value == data[row][col+1] && value == data[row][col-1] && value == data[row][col-2] && value == data[row][col-3] && value == data[row][col-4]
-    #D5 COL 6   
-    puts data[row][col] = 0
-        data[row][col+1] = 0
+    elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == data[row][col+4] && value == data[row][col-1]
+             #D2 COL 6
+                puts data[row][col] = 0
+                 data[row][col+1] = 0
+                 data[row][col+2] = 0
+                 data[row][col+3] = 0
+                 data[row][col+4] = 0
+                 data[row][col-1] = 0
+                print data
+    elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col+3] && value == data[row][col-1] && value == data[row][col-2]
+                  #D3 COL 6
+                puts data[row][col] = 0
+                   data[row][col+1] = 0
+                   data[row][col+2] = 0
+                   data[row][col+3] = 0
+                   data[row][col-1] = 0
+                   data[row][col-2] = 0
+                print data
+    elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col-1] && value == data[row][col-2] && value == data[row][col-3]
+                  #D4 COL 6
+                puts data[row][col] = 0
+                 data[row][col+1] = 0
+                 data[row][col+2] = 0
+                 data[row][col-1] = 0
+                 data[row][col-2] = 0
+                 data[row][col-3] = 0
+                print data
+    elsif value == data[row][col+1] && value == data[row][col-1] && value == data[row][col-2] && value == data[row][col-3] && value == data[row][col-4]
+                  #D5 COL 6   
+                 puts data[row][col] = 0
+                  data[row][col+1] = 0
         data[row][col-1] = 0
         data[row][col-2] = 0
         data[row][col-3] = 0
