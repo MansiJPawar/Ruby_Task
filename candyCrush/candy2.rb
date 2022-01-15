@@ -1,3 +1,4 @@
+
 #primary array
 data = Array.new(6) { Array.new(6) { (rand(0..5)) } }
 print data
