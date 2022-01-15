@@ -397,13 +397,13 @@ if data[row][col] = value
                  data[row+1][col] = 0
                  data[row+2][col] = 0
                 print data
-    elsif value == data[row+1][col] && value == data[row-1][col] #works
+    elsif value == data[row+1][col] && value == data[row-1][col]
                      #R2 ROW 3
                 puts data[row][col] = 0
                  data[row+1][col] = 0
                  data[row-1][col] = 0
                 print data
-    elsif value == data[row-1][col] && value == data[row-2][col] #works
+    elsif value == data[row-1][col] && value == data[row-2][col]
                      #R3#R4 ROW 3
                 puts data[row][col] = 0
                  data[row-1][col] = 0
