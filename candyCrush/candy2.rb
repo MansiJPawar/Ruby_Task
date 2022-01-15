@@ -315,62 +315,62 @@ if data[row][col] = value
                              data[row][col-2] = 0
                         print data
     elsif value == data[row][col+1] && value == data[row][col+2] && value == data[row][col-1]
-    #D4 COL 4
-    puts data[row][col] = 0
-        data[row][col+1] = 0
-        data[row][col+2] = 0
-        data[row][col-1] = 0
-        print data
+                          #D4 COL 4
+                        puts data[row][col] = 0
+                             data[row][col+1] = 0
+                             data[row][col+2] = 0
+                             data[row][col-1] = 0
+                        print data
     elsif value == data[row][col+1] && value == data[row][col-2] && value == data[row][col-1]
-        #D4 COL 4
-        puts data[row][col] = 0
-            data[row][col+1] = 0
-            data[row][col-1] = 0
-            data[row][col-2] = 0
-            print data
+                          #D4 COL 4
+                        puts data[row][col] = 0
+                         data[row][col+1] = 0
+                         data[row][col-1] = 0
+                         data[row][col-2] = 0
+                        print data
     elsif value == data[row][col-1] && value == data[row][col-2] && value == data[row][col-3]
-            #D4#D6#D5 COL 4
-            puts data[row][col] = 0
-                data[row][col-1] = 0
-                data[row][col-2] = 0
-                data[row][col-3] = 0
-                print data
-    elsif value == data[row][col+1] && value == data[row][col-1] && value == data[row][col-2]
-    #D5 COL 4 
-    puts data[row][col] = 0
-        data[row][col+1] = 0
-        data[row][col-1] = 0
-        data[row][col-2] = 0
-        print data
-#************************FOR ROW 4
-    elsif value == data[row+1][col] && value == data[row+2][col] && value == data[row+3][col]
-      #R1#R3 ROW 4  
-      puts data[row][col] = 0
-        data[row+1][col] = 0
-        data[row+2][col] = 0
-        data[row+3][col] = 0
-        print data
-    elsif value == data[row+1][col] && value == data[row+2][col] && value == data[row-1][col]
-        #R2 ROW 4 
-        puts data[row][col] = 0
-            data[row+1][col] = 0
-            data[row+2][col] = 0
-            data[row-1][col] = 0
-            print data
-    elsif value == data[row+1][col] && value == data[row-1][col] && value == data[row-2][col]
-                #R3#R4 ROW 4
-            puts data[row][col] = 0
-                data[row+1][col] = 0
-                data[row-1][col] = 0
-                data[row-2][col] = 0
-                print data
-    elsif value == data[row-3][col] && value == data[row-1][col] && value == data[row-2][col]
-                    #R4#R5 ROW 4
+                         #D4#D6#D5 COL 4
                     puts data[row][col] = 0
-                        data[row-3][col] = 0
-                        data[row-1][col] = 0
-                        data[row-2][col] = 0    
-                        print data                  
+                     data[row][col-1] = 0
+                     data[row][col-2] = 0
+                     data[row][col-3] = 0
+                    print data
+    elsif value == data[row][col+1] && value == data[row][col-1] && value == data[row][col-2]
+                         #D5 COL 4 
+                    puts data[row][col] = 0
+                     data[row][col+1] = 0
+                     data[row][col-1] = 0
+                     data[row][col-2] = 0
+                    print data
+                 #************************FOR ROW 4
+    elsif value == data[row+1][col] && value == data[row+2][col] && value == data[row+3][col]
+                       #R1#R3 ROW 4  
+                    puts data[row][col] = 0
+                     data[row+1][col] = 0
+                     data[row+2][col] = 0
+                     data[row+3][col] = 0
+                    print data
+    elsif value == data[row+1][col] && value == data[row+2][col] && value == data[row-1][col]
+                     #R2 ROW 4 
+                    puts data[row][col] = 0
+                     data[row+1][col] = 0
+                     data[row+2][col] = 0
+                     data[row-1][col] = 0
+                    print data
+    elsif value == data[row+1][col] && value == data[row-1][col] && value == data[row-2][col]
+                      #R3#R4 ROW 4
+                    puts data[row][col] = 0
+                     data[row+1][col] = 0
+                     data[row-1][col] = 0
+                     data[row-2][col] = 0
+                    print data
+    elsif value == data[row-3][col] && value == data[row-1][col] && value == data[row-2][col]
+                      #R4#R5 ROW 4
+                    puts data[row][col] = 0
+                     data[row-3][col] = 0
+                     data[row-1][col] = 0
+                     data[row-2][col] = 0    
+                    print data                  
      #**************************FOR COL 3
     elsif value == data[row][col+1] && value == data[row][col+2]
          #D1,D2,D3,D4 COL 3
