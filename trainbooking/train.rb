@@ -108,12 +108,12 @@ class Train #1
                 end
                 else 
                      puts "/////////  Invalid password  //////////"
-                end #ifend #1,1**  #3
+                end #ifend  #3
         else 
             puts "***-----Please enter valid name-----***"
         end
-    end #defend 5line  #2
-end  #classend 3line  #1
+    end #defend  #2
+end  #classend  #1
 
 #for options
 puts 
